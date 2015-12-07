@@ -16,8 +16,7 @@ public struct Argsplit {
   }
   
   private func stripStr(str:String) -> String {
-    let re = try! NSRegularExpression(pattern: "[\\s]{2}", options: NSRegularExpressionOptions.CaseInsensitive)
-    let newStr = re.stringByReplacingMatchesInString(str, options: NSMatchingOptions.WithoutAnchoringBounds, range: NSMakeRange(0, str.characters.count), withTemplate: " ")
+    let newStr = str.stringByReplacingOccurrencesOfString("  ", withString: " ")
     return newStr
   }
   

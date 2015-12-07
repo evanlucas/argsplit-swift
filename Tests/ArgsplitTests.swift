@@ -85,9 +85,13 @@ class ArgsplitTests: XCTestCase {
   }
   
   func testPerformanceExample() {
+    var i = 0
     self.measureBlock {
-      let input = "git clone https://github.com/evanlucas/node-launchctl.git"
-      _ = Argsplit(inputString: input).parse()
+      repeat {
+        let input = "git clone https://github.com/evanlucas/node-launchctl.git"
+        _ = Argsplit(inputString: input).parse()
+        i += 1
+      } while i < 100
     }
   }
 }
