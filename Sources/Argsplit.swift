@@ -6,6 +6,8 @@
 //  Copyright © 2015 Evan Lucas. All rights reserved.
 //
 
+import Foundation
+
 public struct Argsplit {
   private var input:String
   
