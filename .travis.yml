@@ -2,4 +2,5 @@ language: objective-c
 osx_image: xcode7.2
 script:
 - set -o pipefail
-- xcodebuild -scheme Argsplit test -sdk macosx | xcpretty 
+- xcodebuild -scheme Argsplit test -sdk macosx -enableCodeCoverage YES -derivedDataPath ./out | xcpretty 
+- xcrun llvm-cov report -use-color=true -instr-profile ./out/Build/Intermediates/CodeCoverage/Argsplit/Coverage.profdata ./out/Build/Intermediates/CodeCoverage/Argsplit/Products/Debug/Argsplit.framework/Argsplit
