@@ -86,7 +86,7 @@ class ArgsplitTests: XCTestCase {
   
   func testPerformanceExample() {
     var i = 0
-    self.measureBlock {
+    self.measure {
       repeat {
         let input = "git clone https://github.com/evanlucas/node-launchctl.git"
         _ = Argsplit(inputString: input).parse()

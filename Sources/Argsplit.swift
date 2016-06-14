@@ -15,8 +15,8 @@ public struct Argsplit {
     self.input = inputString
   }
   
-  private func stripStr(str:String) -> String {
-    let newStr = str.stringByReplacingOccurrencesOfString("  ", withString: " ")
+  private func stripStr(_ str:String) -> String {
+    let newStr = str.replacingOccurrences(of: "  ", with: " ")
     return newStr
   }
   
